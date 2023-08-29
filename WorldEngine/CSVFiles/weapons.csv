@@ -1,0 +1,11 @@
+01,club,1d4,bludgeoning,1
+02,dagger,1d4,piercing,2
+03,greatclub,1d8,bludgeoning,2
+04,mace,1d6,bludgeoning,10
+05,spear,1d6,piercing,10
+06,flail,1d8,bludgeoning,15
+07,glaive,1d10,slashing,25
+08,greatsword,2d6,slashing,60
+09,maul,2d6,bludgeoning,15
+10,rapier,1d8,piercing,20
+11,scimitar,1d6,slashing,35
