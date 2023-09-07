@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorldEngine.Classes
 {
-    internal class Monster
+    public class Monster
     {
         private int _idNumber;
         private string _name;

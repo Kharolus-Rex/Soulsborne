@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorldEngine.Classes
 {
-    internal class Weapon
+    public class Weapon
     {
         private int _idNumber;
         private string _name;

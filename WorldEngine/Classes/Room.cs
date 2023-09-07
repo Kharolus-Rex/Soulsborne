@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorldEngine.Classes
 {
-    class Room
+    public class Room
     {
         private int _idNumber;
         private string _name;
