@@ -1,11 +1,16 @@
-﻿Enemy Name : Beast ,, Patient,,Health : 158 -190,,"Weakness : fire, Blade"
-Enemy Name : Beast  Ogre,,,,Health : 158 -190,,"Weakness : fire, Blade"
-Enemy Name: Human Exiled Knight,,,,Health : 200 - 313,,"Weakness : fire, Blade"
-Enemy Name: Deep Sea Hound,,,,Health : 214 - 321,,"Weakness : fire, Blade"
-Enemy Name: Shark Giant,,,,Health : 342 - 350,,"Weakness : fire, Blade"
-Enemy Name: Scorpion,,,,Health : 158 -190,,"Weakness : fire, Blade"
-Enemy Name: Fire Giant,,,,Health: 425 - 480,,"Weakness : fire, Blade"
-Enemy Name: Skeleton,,,,Health: 158-190 ,,"Weakness : fire, Blade"
-Enemy Name: Feral Dog,,,,Health: 100-111,,"Weakness : fire, Blade"
-Enemy Name: Dragon,,,,Health 900-1000,,"Weakness : Frost, Blade"
-Enemy Name Fallen Priest,,,,Health 123-130,,Weakness : Bludgeoning
+﻿ID,name,description,race,HP,AC,weaponID
+01,Patient,A necrotic looking humanoid,beast,80,12,01
+02,Ogre,A mutated humanoid,beast,120,13,03
+03,Exiled Knight,A human dishonorably discharged,humanoid,135,15,12
+04,Deep Hound,A magical mutation of wild dog,beast,115,14,02
+05,Giant Toad,A toad with a hunger for more than bugs,beast,145,14,03
+06,Scorpion,A smaller insectoid with a nasty stinger,beast,50,13,02
+07,Pyromancer,A human with knowledge of fire magic,humanoid,110,15,13
+08,Skeleton,A humanoid with no more flesh or insides,undead,70,13,11
+09,Skeletal Archer,A skeleton but more range,undead,50,13,14
+10,Feral Dog,A wild hound,beast,40,13,02
+11,Dragonborn,A humanoid with draconic heratige,humanoid,130,15,07
+12,Fallen Priest,A cleric or paladin who has fallen from grace,humanoid,150,15,04
+13,Phalanx,A soldier in heavy armor,humanoid,100,16,05
+14,Druid,A mage of nature that has seen better days,humanoid,80,14,13
+15,Kha'Zix,A creature not of this world. Be careful,voidling,160,16,15
