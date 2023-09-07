@@ -12,10 +12,11 @@ namespace WorldEngine
      * 
      */
 
-    internal class Program
+    public static class World
     {
-        static void Main(string[] args)
-        {
-        }
+        public static List<Room> rooms = new List<Room>();
+        public static List<Weapon> weapons = new List<Weapon>();
+        public static List<Monster> monsters = new List<Monster>();
+        public static List<Player> players = new List<Player>();
     }
 }
