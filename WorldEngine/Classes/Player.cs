@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorldEngine.Classes
+namespace WorldEngine
 {
-    class Player
+    public class Player
     {
         private int _playerID;
         private string _playerName;
@@ -15,14 +15,14 @@ namespace WorldEngine.Classes
         private int _playerAC;
         private int _weaponID;
 
-        public Player(int PlayerID, string PlayerName, string PlayerRace, int PlayerHP, int PlayerAC, int WeaponID)
+        public Player(int playerID, string playerName, string playerRace, int playerHP, int playerAC, int weaponID)
         {
-            PlayerID = _playerID;
-            PlayerName = _playerName;
-            PlayerRace = _playerRace;
-            PlayerHP = _playerHP;
-            PlayerAC = _playerAC;
-            WeaponID = _weaponID;
+            PlayerID = playerID;
+            PlayerName = playerName;
+            PlayerRace = playerRace;
+            PlayerHP = playerHP;
+            PlayerAC = playerAC;
+            WeaponID = weaponID;
         }
         public int PlayerID { get { return _playerID; } set { _playerID = value; } }
         public string PlayerName { get { return _playerName; } set { _playerName = value; } }

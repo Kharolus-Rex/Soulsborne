@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorldEngine.Classes
+namespace WorldEngine
 {
     public class Monster
     {

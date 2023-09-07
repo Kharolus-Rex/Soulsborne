@@ -4,23 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorldEngine.Classes
+namespace WorldEngine
 {
     public class Weapon
     {
         private int _idNumber;
         private string _name;
-        private string _description;
+        //private string _description;  |  Depricated for now
         private string _damage;
         private string _damageType;
         private int _price;
-        public Weapon(int idNumber, string name, string damage, string damageType, int price, string description)
+        public Weapon(int idNumber, string name, string damage, string damageType, int price)
         {
             IdNumber = idNumber;
 
             Name = name;
 
-            Description = description;
+            //Description = description;  |  Depricated for now
 
             Damage = damage;
 
@@ -34,6 +34,7 @@ namespace WorldEngine.Classes
         public string Damage { get { return _damage; } set { _damage = value; } }
         public string DamageType { get { return _damageType; } set { _damageType = value; } }
         public int Price { get { return _price; } set { _price = value; } }
-        public string Description { get { return _description; } set { _description = value; } }
+        //Depricated for now
+        //public string Description { get { return _description; } set { _description = value; } }
     }
 }

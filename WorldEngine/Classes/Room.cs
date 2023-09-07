@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorldEngine.Classes
+namespace WorldEngine
 {
     public class Room
     {
@@ -18,17 +18,17 @@ namespace WorldEngine.Classes
         private int _exitUp;
         private int _exitDown;
 
-        public Room(int IdNumber, string Name, string Description, int ExitNorth, int ExitSouth, int ExitEast, int ExitWest, int ExitUp, int ExitDown)
+        public Room(int idNumber, string name, string description, int exitNorth, int exitSouth, int exitEast, int exitWest, int exitUp, int exitDown)
         {
-            IdNumber = _idNumber;
-            Name = _name;
-            Description = _description;
-            ExitNorth = _exitNorth;
-            ExitSouth = _exitSouth;
-            ExitEast = _exitEast;
-            ExitWest = _exitWest;
-            ExitUp = _exitUp;
-            ExitDown = _exitDown;
+            IdNumber = idNumber;
+            Name = name;
+            Description = description;
+            ExitNorth = exitNorth;
+            ExitSouth = exitSouth;
+            ExitEast = exitEast;
+            ExitWest = exitWest;
+            ExitUp = exitUp;
+            ExitDown = exitDown;
         }
         public int IdNumber { get { return _idNumber;} set { _idNumber = value; } }
         public string Name { get { return _name; } set { _name = value; } }
