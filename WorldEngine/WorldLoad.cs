@@ -69,7 +69,29 @@ namespace WorldEngine
 
         public static void LoadMonsters()
         {
+            using (var reader = new StreamReader("filepath"))
+            {
+                //skip first line when we add headers
+                //reader.ReadLine();
 
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
+
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string description = row[2];
+                    string race = row[3];
+                    int hp = int.Parse(row[4]);
+                    int ac = int.Parse(row[5]);
+                    int weaponID = int.Parse(row[6]);
+
+                    Weapon weapon = World.weapons.FirstOrDefault(w => w.IdNumber == weaponID);
+
+                    Monster monster = new Monster(id, name, description, race, hp, ac, weapon);
+                    World.monsters.Add(monster);
+                }
+            }
         }
 
     }
