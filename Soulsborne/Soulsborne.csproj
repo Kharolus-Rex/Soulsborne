@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorldEngine\WorldEngine.csproj">
+      <Project>{ef3661d7-d52f-4bee-8d55-87220cc5d70b}</Project>
+      <Name>WorldEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
