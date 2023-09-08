@@ -11,12 +11,35 @@ namespace WorldEngine
     {
         public static void LoadPlayer()
         {
+            using (var reader = new StreamReader(@"..\WorldEngine\CSVFiles\Player.csv"))
+            {
+                //skip first line
+                //reader.ReadLine();
 
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
+
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string race = row[2];
+                    int hp = int.Parse(row[3]);
+                    int ac = int.Parse(row[4]);
+                    int weaponID = int.Parse(row[5]);
+
+                    //this will be used for when player may have a different starting weapon
+                    //List<Weapon> weapon = new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weaponID) };
+
+                    //may change this if player is allowed to change weapon
+                    Player player = new Player(id, name, race, hp, ac, weaponID);
+                    World.players.Add(player);
+                }
+            }
         }
 
         public static void LoadRooms()
         {
-            using (StreamReader reader = new StreamReader("filepath"))
+            using (StreamReader reader = new StreamReader(@"..\WorldEngine\CSVFiles\rooms.csv"))
             {
                 List<Room> list = new List<Room>();
 
@@ -45,7 +68,7 @@ namespace WorldEngine
 
         public static void LoadWeapons()
         {
-            using (var reader = new StreamReader("filepath"))
+            using (var reader = new StreamReader(@"..\WorldEngine\CSVFiles\weapons.csv"))
             {
                 //no first line headers in file, may change later
                 //reader.ReadLine();
@@ -69,7 +92,7 @@ namespace WorldEngine
 
         public static void LoadMonsters()
         {
-            using (var reader = new StreamReader("filepath"))
+            using (var reader = new StreamReader(@"..\WorldEngine\CSVFiles\Monsters.csv"))
             {
                 //skip first line when we add headers
                 //reader.ReadLine();
