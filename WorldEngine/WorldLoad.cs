@@ -14,7 +14,7 @@ namespace WorldEngine
             using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\Player.csv"))
             {
                 //skip first line
-                //reader.ReadLine();
+                reader.ReadLine();
 
                 while (!reader.EndOfStream)
                 {
