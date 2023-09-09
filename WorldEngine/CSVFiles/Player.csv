@@ -1,2 +1,2 @@
-﻿ID,name,race,HP,AC,weaponID
-01,Runner,humanoid,200,15,02
+﻿ID,name,race,location,HP,AC,weaponID
+01,Runner,humanoid,01,200,15,02

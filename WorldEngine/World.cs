@@ -18,5 +18,6 @@ namespace WorldEngine
         public static List<Weapon> weapons = new List<Weapon>();
         public static List<Monster> monsters = new List<Monster>();
         public static List<Player> players = new List<Player>();
+
     }
 }
