@@ -76,6 +76,7 @@ namespace WorldEngine
                         int nextRoom = room.ExitUp;
                         World.players[0].PlayerLocation = nextRoom;
                     }
+                    break;
                 case "down":
                 case "d":
                     if (room.ExitDown == -1)
@@ -88,6 +89,7 @@ namespace WorldEngine
                         int nextRoom = room.ExitDown;
                         World.players[0].PlayerLocation = nextRoom;
                     }
+                    break;
                 default:
                     Console.WriteLine("A wall of force blocks your movement in that direction. Where else could you go?");
                     break;
