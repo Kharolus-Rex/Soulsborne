@@ -11,7 +11,7 @@ namespace WorldEngine
     {
         public static void LoadPlayer()
         {
-            using (var reader = new StreamReader(@"..\WorldEngine\CSVFiles\Player.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\Player.csv"))
             {
                 //skip first line
                 //reader.ReadLine();
@@ -40,7 +40,7 @@ namespace WorldEngine
 
         public static void LoadRooms()
         {
-            using (StreamReader reader = new StreamReader(@"..\WorldEngine\CSVFiles\rooms.csv"))
+            using (StreamReader reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\rooms.csv"))
             {
                 List<Room> list = new List<Room>();
 
@@ -69,7 +69,7 @@ namespace WorldEngine
 
         public static void LoadWeapons()
         {
-            using (var reader = new StreamReader(@"..\WorldEngine\CSVFiles\weapons.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\weapons.csv"))
             {
                 //no first line headers in file, may change later
                 //reader.ReadLine();
@@ -93,10 +93,10 @@ namespace WorldEngine
 
         public static void LoadMonsters()
         {
-            using (var reader = new StreamReader(@"..\WorldEngine\CSVFiles\Monsters.csv"))
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\Monsters.csv"))
             {
-                //skip first line when we add headers
-                //reader.ReadLine();
+                //skips first line headers
+                reader.ReadLine();
 
                 while (!reader.EndOfStream)
                 {
