@@ -7,7 +7,7 @@ using WorldEngine;
 
 namespace Soulsborne
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
