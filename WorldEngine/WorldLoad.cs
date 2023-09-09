@@ -23,15 +23,16 @@ namespace WorldEngine
                     int id = int.Parse(row[0]);
                     string name = row[1];
                     string race = row[2];
-                    int hp = int.Parse(row[3]);
-                    int ac = int.Parse(row[4]);
-                    int weaponID = int.Parse(row[5]);
+                    int location = int.Parse(row[3]);
+                    int hp = int.Parse(row[4]);
+                    int ac = int.Parse(row[5]);
+                    int weapons = row[6] != "" ? weapons = int.Parse(row[6]) : weapons = 0;
 
                     //this will be used for when player may have a different starting weapon
-                    //List<Weapon> weapon = new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weaponID) };
+                    List<Weapon> weapon = new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weapons) };
 
                     //may change this if player is allowed to change weapon
-                    Player player = new Player(id, name, race, hp, ac, weaponID);
+                    Player player = new Player(id, name, race, location, hp, ac, weapon);
                     World.players.Add(player);
                 }
             }
