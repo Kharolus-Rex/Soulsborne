@@ -1,15 +1,15 @@
-﻿01,Treasures,Large sums of gold
-02,Treasures,Small sums of gold
-03,Treasures,Treaure map
-05,Treasures,Skill Book
-05,Treasures,Weapon Rune
-06,Treasures,Armor Rune
-07,Treasures,Skill Potion
-08,Treasures,Health upgrade
-09,Treasures,Mana upgrade
-10,Treasures,Door Key
-11,Treasures,Stamina upgrade
-12,Treasures,Crystal diamonds
-13,Treasures,Fire Spell
-14,Treasures,Healing Spell
-15,Treasures,Lighting Spell
+﻿01,Large bag of gold, 50
+02,Small sums of gold, 20
+03,Treaure map, novice
+05,Skill Book, novice
+05,Weapon Rune, common
+06,Armor Rune, rare
+07,Skill Potion, arms 
+08,Health upgrade, small
+09,Mana upgrade, large
+10,Door Key, rare
+11,Stamina upgrade, medium
+12,Crystal diamonds, legendary
+13,Fire Spell, low
+14,Healing Spell, high
+15,Lighting Spell, medium
