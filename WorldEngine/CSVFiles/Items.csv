@@ -1,12 +1,12 @@
 ﻿01,Heavy Plate Armor,Description,Grants superb protection
-02,Small armor plate,,Description,Grants good protection
-03,quest scroll,,Description,scrolls related to questing
-04,lockpicks,,Description,picking lock
-05,Leatherstrips,,Description,crafting material
-06,Iron ingots,,Description,crafting material
-07,Heavy bolts,,Description,Heavy ammunition for heavy crossbow
-08,Standard Bolts,,Description,Standard ammunition for crossbow
-09,Standard arrows,,Description,Standard arrows for bow
-10,Large Arrows,,Description,Large Arrows for Large Bow
-11,Fire Arrows,,Description,Fire arrows for Bow
-12,Posion Darts,,Description,Posion Darts for Darts
+02,Small armor plate,Description,Grants good protection
+03,quest scroll,Description,scrolls related to questing
+04,lockpicks,Description,picking lock
+05,Leatherstrips,Description,crafting material
+06,Iron ingots,Description,crafting material
+07,Heavy bolts,Description,Heavy ammunition for heavy crossbow
+08,Standard Bolts,Description,Standard ammunition for crossbow
+09,Standard arrows,Description,Standard arrows for bow
+10,Large Arrows,Description,Large Arrows for Large Bow
+11,Fire Arrows,Description,Fire arrows for Bow
+12,Posion Darts,Description,Posion Darts for Darts
