@@ -2,7 +2,7 @@
 02,Small sums of gold, 20
 03,Treaure map, novice
 05,Skill Book, novice
-05,Weapon Rune, common
+05,sword Rune, common
 06,Armor Rune, rare
 07,Skill Potion, arms 
 08,Health upgrade, small
@@ -10,6 +10,6 @@
 10,Door Key, rare
 11,Stamina upgrade, medium
 12,Crystal diamonds, legendary
-13,Fire Spell, low
-14,Healing Spell, high
-15,Lighting Spell, medium
+13,Fire sword, low
+14,Healing staff, high
+15,Lighting rod, medium

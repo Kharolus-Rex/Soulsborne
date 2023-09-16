@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
     private int _idNumber;
     private string _name;
-    private string _value;
-    public Treasures(int idNumber, string name, string value)
+    private int _value;
+    public Treasures(int idNumber, string name, int value)
     {
         IdNumber = idNumber;
 

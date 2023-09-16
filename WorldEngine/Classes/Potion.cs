@@ -18,13 +18,12 @@ public class Class1
 
         Name = name;
 
-        usage = usage;
+        
     }
 
     public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }
     public string Name { get { return _name; } set { _name = value; } }
-    public string Usage { get { return _usage; } set { _usage = value; } }
-
+    
 }
 
 }
