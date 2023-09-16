@@ -18,6 +18,8 @@ namespace WorldEngine
         public static List<Weapon> weapons = new List<Weapon>();
         public static List<Monster> monsters = new List<Monster>();
         public static List<Player> players = new List<Player>();
-
+        public static List<Potion> potion = new List<Potion>();
+        public static List<Treasures> treasures = new List<Treasures>();
+        public static List<Items> items = new List<Items>();
     }
 }
