@@ -24,6 +24,8 @@ namespace WorldEngine
 
         public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }
         public string Name { get { return _name; } set { _name = value; } }
+        public string Description { get { return _description; } set { _description = value; } }
+
         
         
         //Depricated for now

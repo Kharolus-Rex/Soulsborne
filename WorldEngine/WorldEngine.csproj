@@ -47,9 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveGameplay.cs" />
+    <Compile Include="Classes\Items.cs" />
     <Compile Include="Classes\Monster.cs" />
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Potion.cs" />
     <Compile Include="Classes\Room.cs" />
+    <Compile Include="Classes\Treasures.cs" />
     <Compile Include="Classes\Weapon.cs" />
     <Compile Include="Exploration.cs" />
     <Compile Include="WorkingCombat.cs" />
