@@ -1,15 +1,15 @@
-﻿Treasures,Large sums of gold
-Treasures,Small sums of gold
-Treasures,Treaure map
-Treasures,Skill Book
-Treasures,Weapon Rune
-Treasures,Armor Rune
-Treasures,Skill Potion
-Treasures,Health upgrade
-Treasures,Mana upgrade
-Treasures,Door Key
-Treasures,Stamina upgrade
-Treasures,Crystal diamonds
-Treasures,Fire Spell
-Treasures,Healing Spell
-Treasures,Lighting Spell
+﻿01,Treasures,Large sums of gold
+02,Treasures,Small sums of gold
+03,Treasures,Treaure map
+05,Treasures,Skill Book
+05,Treasures,Weapon Rune
+06,Treasures,Armor Rune
+07,Treasures,Skill Potion
+08,Treasures,Health upgrade
+09,Treasures,Mana upgrade
+10,Treasures,Door Key
+11,Treasures,Stamina upgrade
+12,Treasures,Crystal diamonds
+13,Treasures,Fire Spell
+14,Treasures,Healing Spell
+15,Treasures,Lighting Spell
