@@ -1,11 +1,11 @@
-﻿01,Lesser Mana potion ,Usage,Restores a small portion of health
-02,Lesser Health potion ,Usage,Restores a small portion of health
-03,Greater Mana Potion,Usage,Restores a large portion of Mana
-04,Greater Health Potion,Usage,Restores a Large portion of Health
-05,Repair Power,Usage,Used to repair equiment
-06,Green Blossem,Usage,Boost stamina recovery speed
-07,Magic Mushroom,Usage,Regenerates entire Mana
-08,Bloodred Moss Clump,Usage,Reduces bleeding build up
-09,Charcoal Pine Resin,Usage,Applies fire damage to weapons
-10,Curse Resin,Usage,Applies curse damage to weapons
-11,Gold Resin,Usage,Applies lighting damage to weapons
+﻿01,Lesser Mana potion,Restores a small portion of health
+02,Lesser Health potion,Restores a small portion of health
+03,Greater Mana Potion,Restores a large portion of Mana
+04,Greater Health Potion,Restores a Large portion of Health
+05,Repair Power,Used to repair equiment
+06,Green Blossem,Boost stamina recovery speed
+07,Magic Mushroom,Regenerates entire Mana
+08,Bloodred Moss Clump,Reduces bleeding build up
+09,Charcoal Pine Resin,Applies fire damage to weapons
+10,Curse Resin,Applies curse damage to weapons
+11,Gold Resin,Applies lighting damage to weapons

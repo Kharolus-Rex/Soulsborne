@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorldEngine
+namespace WorldEngine { 
+}
 
-public class Class1
+public class Potion
 {
     private int _idNumber;
     private string _name;
-    //private string _description;  |  Depricated for now
-    private string _usage;
-    public Potion(int idNumber, string name, string usage)
+    public Potion(int idNumber, string name)
     {
         IdNumber = idNumber;
 
@@ -26,4 +25,3 @@ public class Class1
     
 }
 
-}

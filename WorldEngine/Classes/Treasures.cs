@@ -4,26 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-  namespace WorldEngine
+  namespace WorldEngine { }
 
-  public class Treasures
+public class Treasures
 {
 
     private int _idNumber;
     private string _name;
     private int _value;
-    public Treasures(int idNumber, string name, int value)
+    public Treasures(int idNumber, string name)
     {
         IdNumber = idNumber;
 
         Name = name;
 
-        Value = value;
+
     }
 
     public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }
     public string Name { get { return _name; } set { _name = value; } }
-    public string Value { get { return _value; } set { _value = value; } }
+
+   }
     
-}
-}
+
+
