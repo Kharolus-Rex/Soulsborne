@@ -59,9 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CSVFiles\Items.csv" />
     <None Include="CSVFiles\Player.csv" />
     <None Include="CSVFiles\Monsters.csv" />
+    <None Include="CSVFiles\potions.csv" />
     <None Include="CSVFiles\rooms.csv" />
+    <None Include="CSVFiles\Treasures.csv" />
     <None Include="CSVFiles\weapons.csv" />
   </ItemGroup>
   <ItemGroup />
