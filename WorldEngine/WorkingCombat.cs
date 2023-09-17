@@ -21,8 +21,7 @@ namespace WorldEngine
                 if ( monster.HP <= 0 )
                 {
                     Console.WriteLine($"{monster.Name} is slain.");
-                    //TODO - Come back and update all references to monsters in rooms.
-                    //World.rooms[World.players[0].PlayerLocation].Monsters.RemoveAt(0);
+                    World.rooms[World.players[0].PlayerLocation].Monsters.RemoveAt(0);
                     return;
                 }
 
@@ -32,8 +31,8 @@ namespace WorldEngine
                 Console.WriteLine($"{monster.Name} deals {monsterDamage} {monster.MonsterWeapon.DamageType} damage to {player.PlayerName}.");
                 if ( player.PlayerHP <= 0 )
                 {
-                    Console.WriteLine($"{player.PlayerName} is slain. Game over.");
-                    //StandardMessages.GameOver? something like that. TODO
+                    Console.WriteLine($"{player.PlayerName} is slain.");
+                    ActiveGameplay.GameOver();
                 }
             }
         }
