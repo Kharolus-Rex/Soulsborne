@@ -16,8 +16,14 @@ namespace Soulsborne
             WorldLoad.LoadMonsters();
             WorldLoad.LoadRooms();
             WorldLoad.LoadPlayer();
+            WorldLoad.LoadItems();
+            WorldLoad.LoadPotions();
+            WorldLoad.LoadTreasures();
+            ActiveGameplay.GameStart();
 
             //Gameplay loop to go below
+            ActiveGameplay.GameplayLoop();
+            ActiveGameplay.ExitState();
         }
     }
 }
