@@ -27,12 +27,18 @@ namespace WorldEngine
                     int hp = int.Parse(row[4]);
                     int ac = int.Parse(row[5]);
                     int weapons = row[6] != "" ? weapons = int.Parse(row[6]) : weapons = 0;
+                    int items = row[7] != "" ? items = int.Parse(row[7]) : items = 0;
+                    int potions = row[8] != "" ? potions = int.Parse(row[8]) : potions = 0;
+                    int treasures = row[9] != "" ? treasures = int.Parse(row[9]) : treasures = 0;
 
                     //this will be used for when player may have a different starting weapon
                     List<Weapon> weapon = new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weapons) };
+                    List<Items> item = new List<Items> { World.items.FirstOrDefault(i => i.IdNumber == items) };
+                    List<Potion> potion = new List<Potion> { World.potion.FirstOrDefault(p => p.IdNumber == potions) };
+                    List<Treasures> treasure = new List<Treasures> { World.treasures.FirstOrDefault(t => t.IdNumber == treasures) };
 
                     //may change this if player is allowed to change weapon
-                    Player player = new Player(id, name, race, location, hp, ac, weapon);
+                    Player player = new Player(id, name, race, location, hp, ac, weapon, item, potion, treasure);
                     World.players.Add(player);
                 }
             }
