@@ -24,12 +24,12 @@ namespace WorldEngine
 
         public static void GameplayLoop()
         {
-            Room room = World.FindRoomByID(World.players[0].PlayerLocation);
+            Room room = World.rooms[World.players[0].PlayerLocation];
             string action;
             action = Console.ReadLine().ToLower();
             do
             {
-                room = World.FindRoomByID(World.players[0].PlayerLocation);
+                room = World.rooms[World.players[0].PlayerLocation];
                 switch (action)
                 {
                     case "north":
@@ -64,13 +64,60 @@ namespace WorldEngine
         {
             Console.WriteLine("\nYou feel your body fade from reality, into the ash you've walked upon.");
             Console.WriteLine("Your body will be a warning to those to come.");
-            Console.WriteLine("+++++Game Over+++++\nPress any key to continue...");
+            Console.WriteLine("+++++Game Over+++++\nPress any key to continue..."); //2 writeLine statements in 1. leave it as is
             Console.ReadLine();
         }
 
-        public static void NormalState()
+        public static void NormalState(Player player)
         {
             //TODO - initial statement between loops, such as inital information whent the player arrives in a room
+            Room room = World.rooms[World.players[0].PlayerLocation];
+            Console.WriteLine($"You are currently in {room.Name}");
+            Console.WriteLine($"{room.Description}");
+            Console.WriteLine($"Current HP: {player.PlayerHP}");
+            Console.WriteLine("Please enter a command: ");
+            GameplayLoop();
+        }
+
+        public static void LookAround()
+        {
+            Room room = World.rooms[World.players[0].PlayerLocation];
+            //display mods, items, etc.
+            if (room.Monsters != null && room.Monsters.Count > 0)
+            {
+                Console.WriteLine("Monsters present:");
+                foreach (Monster monster in room.Monsters)
+                {
+                    Console.WriteLine($" - {monster.Name}");
+                }
+            }
+
+            if (room.Items != null && room.Items.Count > 0)
+            {
+                Console.WriteLine("Items:");
+                foreach (Items item in room.Items)
+                {
+                    Console.WriteLine($" - {item.Name}");
+                }
+            }
+
+            if (room.Weapons != null && room.Weapons.Count > 0)
+            {
+                Console.WriteLine("Weapons:");
+                foreach (Weapon weapon in room.Weapons)
+                {
+                    Console.Write($" - {weapon.Name}");
+                }
+            }
+
+            if (room.Treasures != null && room.Treasures.Count > 0)
+            {
+                Console.WriteLine("Treasures:");
+                foreach (Treasures treasure in room.Treasures)
+                {
+                    Console.WriteLine($" -  {treasure.Name}");
+                }
+            }
         }
     }
 }

@@ -96,5 +96,10 @@ namespace WorldEngine
             }
             return;
         }
+
+        public static void CollectThings()
+        {
+            //TODO - add a command to collect items and things in a room
+        }
     }
 }
