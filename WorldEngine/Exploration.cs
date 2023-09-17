@@ -126,7 +126,7 @@ namespace WorldEngine
 
         public static void LookAround()
         {
-            Room room = World.rooms[World.players[0].PlayerLocation];
+            Room room = World.FindRoomByID(World.players[0].PlayerLocation);
             //display mods, items, etc.
             if (room.Monsters != null && room.Monsters.Count > 0)
             {

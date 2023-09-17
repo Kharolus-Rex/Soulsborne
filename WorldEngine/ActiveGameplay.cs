@@ -18,12 +18,12 @@ namespace WorldEngine
 
         public static void GameplayLoop()
         {
-            Room room = World.rooms[World.players[0].PlayerLocation];
+            Room room = World.FindRoomByID(World.players[0].PlayerLocation);
             string action;
             action = Console.ReadLine().ToLower();
             do
             {
-                room = World.rooms[World.players[0].PlayerLocation];
+                room = World.FindRoomByID(World.players[0].PlayerLocation);
                 switch (action)
                 {
                     case "north":
@@ -78,7 +78,7 @@ namespace WorldEngine
         public static void NormalState(Player player)
         {
             //TODO - initial statement between loops, such as inital information whent the player arrives in a room
-            Room room = World.rooms[player.PlayerLocation];
+            Room room = World.FindRoomByID(World.players[0].PlayerLocation);
             Console.WriteLine($"You are currently in {room.Name}");
             Console.WriteLine($"{room.Description}");
             Console.WriteLine($"Current HP: {player.PlayerHP}");
