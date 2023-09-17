@@ -128,6 +128,7 @@ namespace WorldEngine
         {
             Room room = World.FindRoomByID(World.players[0].PlayerLocation);
             //display mods, items, etc.
+            Console.WriteLine();
             if (room.Monsters != null && room.Monsters.Count > 0)
             {
                 Console.WriteLine("Monsters present:");

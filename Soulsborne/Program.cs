@@ -12,14 +12,14 @@ namespace Soulsborne
         static void Main(string[] args)
         {
             //Load statements for lists
+            WorldLoad.LoadItems();
+            WorldLoad.LoadPotions();
+            WorldLoad.LoadTreasures();
             WorldLoad.LoadWeapons();
             WorldLoad.LoadMonsters();
             WorldLoad.LoadRooms();
             WorldLoad.LoadPlayer();
-            WorldLoad.LoadItems();
-            WorldLoad.LoadPotions();
-            WorldLoad.LoadTreasures();
-
+            
 
             //Gameplay loop to go below
             ActiveGameplay.GameStart();
