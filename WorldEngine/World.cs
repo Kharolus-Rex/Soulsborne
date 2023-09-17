@@ -22,6 +22,11 @@ namespace WorldEngine
         public static List<Treasures> treasures = new List<Treasures>();
         public static List<Items> items = new List<Items>();
 
+        public static Dictionary<int, Room> roomDict = new Dictionary<int, Room>();
+        public static Dictionary<int, Items> itemDict = new Dictionary<int, Items>();
+        public static Dictionary<int, Potion> potionDict = new Dictionary<int, Potion>();
+        public static Dictionary<int, Treasures> treasureDict = new Dictionary<int, Treasures>();
+
         public static Room FindRoomByID(int roomId)
         {
             foreach (Room room in rooms)

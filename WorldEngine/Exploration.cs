@@ -97,9 +97,72 @@ namespace WorldEngine
             return;
         }
 
-        public static void CollectThings()
+        public static void CollectThings(Room room, Player player)
         {
             //TODO - add a command to collect items and things in a room
+            for (int i = 0; i < room.Items.Count; i++)
+            {
+                player.Item.Add(room.Items[i]);
+                room.Items.RemoveAt(i);
+                //this adds the item to player and removes it from the room
+            }
+            for (int i = 0; i < room.Potions.Count; i++)
+            {
+                player.Potions.Add(room.Potions[i]);
+                room.Potions.RemoveAt(i);
+            }
+            for (int i = 0; i < room.Weapons.Count; i++)
+            {
+                player.Weapons.Add(room.Weapons[i]);
+                room.Weapons.RemoveAt(i);
+            }
+            for (int i = 0; i < room.Treasures.Count; i++)
+            {
+                player.Treasure.Add(room.Treasures[i]);
+                room.Treasures.RemoveAt(i);
+            }
+            return;
+        }
+
+        public static void LookAround()
+        {
+            Room room = World.rooms[World.players[0].PlayerLocation];
+            //display mods, items, etc.
+            if (room.Monsters != null && room.Monsters.Count > 0)
+            {
+                Console.WriteLine("Monsters present:");
+                foreach (Monster monster in room.Monsters)
+                {
+                    Console.WriteLine($" - {monster.Name}");
+                }
+            }
+
+            if (room.Items != null && room.Items.Count > 0)
+            {
+                Console.WriteLine("Items:");
+                foreach (Items item in room.Items)
+                {
+                    Console.WriteLine($" - {item.Name}");
+                }
+            }
+
+            if (room.Weapons != null && room.Weapons.Count > 0)
+            {
+                Console.WriteLine("Weapons:");
+                foreach (Weapon weapon in room.Weapons)
+                {
+                    Console.Write($" - {weapon.Name}");
+                }
+            }
+
+            if (room.Treasures != null && room.Treasures.Count > 0)
+            {
+                Console.WriteLine("Treasures:");
+                foreach (Treasures treasure in room.Treasures)
+                {
+                    Console.WriteLine($" -  {treasure.Name}");
+                }
+            }
         }
     }
 }

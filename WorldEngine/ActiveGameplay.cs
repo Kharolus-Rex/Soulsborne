@@ -12,7 +12,6 @@ namespace WorldEngine
 
         public static void GameStart()
         {
-            //TODO - initial game intro loop.
             Console.WriteLine("𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕊𝕠𝕦𝕝𝕤𝕓𝕠𝕣𝕟𝕖");
         }
 
@@ -44,6 +43,14 @@ namespace WorldEngine
                         WorkingCombat.CombatLoop(World.players[0], room.Monsters[0]);
                         break;
                     //TODO Add a inventory command also need to update playercsv to have an inventory
+                    case "look":
+                        Exploration.LookAround();
+                        break;
+                    case "exit":
+                    case "end":
+                    case "quit":
+                        ExitState();
+                        break;
                     default:
                         Console.WriteLine("Your body and mind are not sync. You cannot do that action");
                         break;
@@ -69,7 +76,7 @@ namespace WorldEngine
         public static void NormalState(Player player)
         {
             //TODO - initial statement between loops, such as inital information whent the player arrives in a room
-            Room room = World.rooms[World.players[0].PlayerLocation];
+            Room room = World.rooms[player.PlayerLocation];
             Console.WriteLine($"You are currently in {room.Name}");
             Console.WriteLine($"{room.Description}");
             Console.WriteLine($"Current HP: {player.PlayerHP}");
@@ -77,45 +84,6 @@ namespace WorldEngine
             GameplayLoop();
         }
 
-        public static void LookAround()
-        {
-            Room room = World.rooms[World.players[0].PlayerLocation];
-            //display mods, items, etc.
-            if (room.Monsters != null && room.Monsters.Count > 0)
-            {
-                Console.WriteLine("Monsters present:");
-                foreach (Monster monster in room.Monsters)
-                {
-                    Console.WriteLine($" - {monster.Name}");
-                }
-            }
-
-            if (room.Items != null && room.Items.Count > 0)
-            {
-                Console.WriteLine("Items:");
-                foreach (Items item in room.Items)
-                {
-                    Console.WriteLine($" - {item.Name}");
-                }
-            }
-
-            if (room.Weapons != null && room.Weapons.Count > 0)
-            {
-                Console.WriteLine("Weapons:");
-                foreach (Weapon weapon in room.Weapons)
-                {
-                    Console.Write($" - {weapon.Name}");
-                }
-            }
-
-            if (room.Treasures != null && room.Treasures.Count > 0)
-            {
-                Console.WriteLine("Treasures:");
-                foreach (Treasures treasure in room.Treasures)
-                {
-                    Console.WriteLine($" -  {treasure.Name}");
-                }
-            }
-        }
+       
     }
 }

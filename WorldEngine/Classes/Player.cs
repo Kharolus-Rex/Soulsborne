@@ -15,8 +15,11 @@ namespace WorldEngine
         private int _playerHP;
         private int _playerAC;
         private List<Weapon> _weapons;
+        private List<Items> _items;
+        private List<Potion> _potion;
+        private List<Treasures> _treasures;
 
-        public Player(int playerID, string playerName, string playerRace, int location, int playerHP, int playerAC, List<Weapon> weapons)
+        public Player(int playerID, string playerName, string playerRace, int location, int playerHP, int playerAC, List<Weapon> weapons, List<Items> items, List<Potion> potion, List<Treasures> treasures)
         {
             PlayerID = playerID;
             PlayerName = playerName;
@@ -25,6 +28,9 @@ namespace WorldEngine
             PlayerHP = playerHP;
             PlayerAC = playerAC;
             Weapons = weapons;
+            Item = items;
+            Potions = potion;
+            Treasure = treasures;
         }
         public int PlayerID { get { return _playerID; } set { _playerID = value; } }
         public string PlayerName { get { return _playerName; } set { _playerName = value; } }
@@ -34,5 +40,8 @@ namespace WorldEngine
         public int PlayerAC { get { return _playerAC; } set { _playerAC = value; } }
 
         public List<Weapon> Weapons { get { return _weapons; } set { _weapons = value; } }
+        public List<Items> Item { get { return _items; } set { _items = value; } }
+        public List<Potion> Potions { get { return _potion; } set { _potion = value; } }
+        public List<Treasures> Treasure { get { return _treasures; } set { _treasures = value; } }
     }
 }
