@@ -184,8 +184,7 @@ namespace WorldEngine
 
                     int id = int.Parse(row[0]);
                     string name = row[1];
-                    string description = row[2];
-                    string value = row[3];
+                    string value = row[2];
 
                     Treasures treasure = new Treasures(id, name, value);
                     World.treasures.Add(treasure);
