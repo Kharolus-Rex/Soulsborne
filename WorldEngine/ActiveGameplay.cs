@@ -13,7 +13,7 @@ namespace WorldEngine
 
         public static void GameStart()
         {
-            Console.WriteLine("𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕊𝕠𝕦𝕝𝕤𝕓𝕠𝕣𝕟𝕖");
+            Console.WriteLine("Welcome to Soulsborne");
         }
 
         public static void GameplayLoop()
