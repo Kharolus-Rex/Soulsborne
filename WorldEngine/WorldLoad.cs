@@ -139,54 +139,54 @@ namespace WorldEngine
                     Items item = new Items(id, name, description);
                     World.items.Add(item);
                 }
+            }
+        }
 
-                public static void LoadTreasures()
+        public static void LoadTreasures()
+        {
+
+
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\Treasures.csv"))
+            {
+                //skips first line headers
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
                 {
+                    var row = reader.ReadLine().Split(',');
 
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+                    string description = row[2];
+                    string value = row[3];
 
-                    using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\Treasures.csv"))
-                    {
-                        //skips first line headers
-                        reader.ReadLine();
-
-                        while (!reader.EndOfStream)
-                        {
-                            var row = reader.ReadLine().Split(',');
-
-                            int id = int.Parse(row[0]);
-                            string name = row[1];
-                            string description = row[2];
-                            string value = row[3];
-
-                            Treasures treasure = new Treasures(id, name, value);
-                            World.treasures.Add(treasure);
-                        }
-
-                        public static void LoadPotions()
-                        {
-
-
-                            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\potions.csv"))
-                            {
-                                //skips first line headers
-                                reader.ReadLine();
-
-                                while (!reader.EndOfStream)
-                                {
-                                    var row = reader.ReadLine().Split(',');
-
-                                    int id = int.Parse(row[0]);
-                                    string name = row[1];
-
-
-                                    Potion potions = new Potion(id, name);
-                                    World.potion.Add(potions);
-                                }
-
-                            }
-                        }
-                    }
+                    Treasures treasure = new Treasures(id, name, value);
+                    World.treasures.Add(treasure);
                 }
+
+            }
+        }
+        public static void LoadPotions()
+        {
+
+
+            using (var reader = new StreamReader(@"..\..\..\WorldEngine\CSVFiles\potions.csv"))
+            {
+                //skips first line headers
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
+                {
+                    var row = reader.ReadLine().Split(',');
+
+                    int id = int.Parse(row[0]);
+                    string name = row[1];
+
+
+                    Potion potions = new Potion(id, name);
+                    World.potion.Add(potions);
+                }
+
             }
         }
     }
