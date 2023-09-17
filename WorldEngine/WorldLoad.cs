@@ -208,9 +208,11 @@ namespace WorldEngine
 
                     int id = int.Parse(row[0]);
                     string name = row[1];
+                    string description = row[2];
+                    int value = int.Parse(row[3]);
 
 
-                    Potion potions = new Potion(id, name);
+                    Potion potions = new Potion(id, name, description, value);
                     World.potion.Add(potions);
                 }
 
