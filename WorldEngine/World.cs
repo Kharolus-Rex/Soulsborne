@@ -21,5 +21,17 @@ namespace WorldEngine
         public static List<Potion> potion = new List<Potion>();
         public static List<Treasures> treasures = new List<Treasures>();
         public static List<Items> items = new List<Items>();
+
+        public static Room FindRoomByID(int roomId)
+        {
+            foreach (Room room in rooms)
+            {
+                if (room.IdNumber == roomId)
+                {
+                    return room;
+                }
+            }
+            return null;
+        }
     }
 }

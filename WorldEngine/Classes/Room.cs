@@ -53,8 +53,8 @@ namespace WorldEngine
         public List<Potion> Potions { get { return _potions; } set { _potions = value; } }
         public List<Weapon> Weapons { get { return _weapons; } set { _weapons = value; } }
         public List<Monster> Monsters { get { return _monsters; } set { _monsters = value; } }
-        public List<Treasure> Treasures { get { return _treasures; } set { _treasures = value; } }
-        public List<Item> Items { get { return _items; } set { _items = value; } }
+        public List<Treasures> Treasures { get { return _treasures; } set { _treasures = value; } }
+        public List<Items> Items { get { return _items; } set { _items = value; } }
 
     }
 }
