@@ -62,7 +62,10 @@ namespace WorldEngine
 
         public static void GameOver()
         {
-            //for when player dies in combat. TODO
+            Console.WriteLine("\nYou feel your body fade from reality, into the ash you've walked upon.");
+            Console.WriteLine("Your body will be a warning to those to come.");
+            Console.WriteLine("+++++Game Over+++++\nPress any key to continue...");
+            Console.ReadLine();
         }
 
         public static void NormalState()
