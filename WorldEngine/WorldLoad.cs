@@ -60,8 +60,19 @@ namespace WorldEngine
                     int exitWest = int.Parse(data[6]);
                     int exitUp = int.Parse(data[7]);
                     int exitDown = int.Parse(data[8]);
+                    int potions = data[9] != "" ? potions = int.Parse(data[9]) : potions = 0;
+                    int weapons = data[10] != "" ? weapons = int.Parse(data[10]) : weapons = 0;
+                    int monsters = data[11] != "" ? monsters = int.Parse(data[11]) : monsters = 0;
+                    int treasures = data[12] != "" ? treasures = int.Parse(data[12]) : treasures = 0;
+                    int items = data[13] != "" ? items = int.Parse(data[13]) : items = 0;
 
-                    Room room = new Room(id, name, description, exitNorth, exitSouth, exitEast, exitWest, exitUp, exitDown);
+                    List<Potion> potion = data[9] != "0" ? new List<Potion> { World.potion.FirstOrDefault(p => p.IdNumber == potions) } : new List<Potion>();
+                    List<Weapon> weapon = data[10] != "0" ? new List<Weapon> { World.weapons.FirstOrDefault(w => w.IdNumber == weapons) } : new List<Weapon>();
+                    List<Monster> monster = data[11] != "0" ? new List<Monster> { World.monsters.FirstOrDefault(m => m.IdNumber == monsters) } : new List<Monster>();
+                    List<Treasures> treasure = data[12] != "0" ? new List<Treasures> { World.treasures.FirstOrDefault(t => t.IdNumber == treasures) } : new List<Treasures>();
+                    List<Items> item = data[13] != "0" ? new List<Items> { World.items.FirstOrDefault(i => i.IdNumber == items) } : new List<Items>();
+
+                    Room room = new Room(id, name, description, exitNorth, exitSouth, exitEast, exitWest, exitUp, exitDown, potion, weapon, monster, treasure, item);
                     World.rooms.Add(room);
                 }
             }
