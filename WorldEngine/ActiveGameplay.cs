@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,9 +20,9 @@ namespace WorldEngine
         {
             Room room = World.rooms[World.players[0].PlayerLocation];
             string action;
+            action = Console.ReadLine().ToLower();
             do
             {
-                action = Console.ReadLine().ToLower();
                 room = World.rooms[World.players[0].PlayerLocation];
                 switch (action)
                 {
@@ -46,15 +47,15 @@ namespace WorldEngine
                     case "look":
                         Exploration.LookAround();
                         break;
-                    case "exit":
-                    case "end":
-                    case "quit":
-                        ExitState();
-                        break;
                     default:
                         Console.WriteLine("Your body and mind are not sync. You cannot do that action");
                         break;
                 }
+
+                NormalState(World.players[0]);
+
+                action = Console.ReadLine().ToLower();
+
             } while (action != "exit");
         }
 
@@ -63,6 +64,7 @@ namespace WorldEngine
             Console.WriteLine("You feel yourself drift off. Until next time :)");
             Console.WriteLine("Press any key to exit");
             Console.ReadLine();
+            
         }
 
         public static void GameOver()
@@ -81,7 +83,6 @@ namespace WorldEngine
             Console.WriteLine($"{room.Description}");
             Console.WriteLine($"Current HP: {player.PlayerHP}");
             Console.WriteLine("Please enter a command: ");
-            GameplayLoop();
         }
 
        
