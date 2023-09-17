@@ -13,13 +13,7 @@ namespace WorldEngine
         public static void GameStart()
         {
             //TODO - initial game intro loop.
-            WorldLoad.LoadWeapons();
-            WorldLoad.LoadMonsters();
-            WorldLoad.LoadRooms();
-            WorldLoad.LoadPlayer();
-            WorldLoad.LoadItems();
-            WorldLoad.LoadPotions();
-            WorldLoad.LoadTreasures();
+            Console.WriteLine("𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝕊𝕠𝕦𝕝𝕤𝕓𝕠𝕣𝕟𝕖");
         }
 
         public static void GameplayLoop()
@@ -40,6 +34,10 @@ namespace WorldEngine
                     case "e":
                     case "west":
                     case "w":
+                    case "u":
+                    case "up":
+                    case "d":
+                    case "down":
                         Exploration.Movement(action, room);
                         break;
                     case "attack":
