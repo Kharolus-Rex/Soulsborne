@@ -1,11 +1,11 @@
-﻿01,Lesser Mana potion,Restores a small portion of health,40
+﻿01,Lesser Mana potion,Restores a small portion of mana,40
 02,Lesser Health potion,Restores a small portion of health,30
-03,Greater Mana Potion,Restores a large portion of Mana, 70
+03,Greater Mana Potion,Restores a large portion of Mana,70
 04,Greater Health Potion,Restores a Large portion of Health,70
-05,Repair Power,Used to repair equiment,75%
-06,Green Blossem,Boost stamina recovery speed,65%
-07,Magic Mushroom,Regenerates entire Mana, 100%
-08,Bloodred Moss Clump,Reduces bleeding build up,25%
-09,Charcoal Pine Resin,Applies fire damage to weapons, 85%
-10,Curse Resin,Applies curse damage to weapon, 35%
-11,Gold Resin,Applies lighting damage to weapons, 40%
+05,Repair Power,Used to repair equiment,75
+06,Green Blossem,Boost stamina recovery speed,65
+07,Magic Mushroom,Regenerates entire Mana,100
+08,Bloodred Moss Clump,Reduces bleeding build up,25
+09,Charcoal Pine Resin,Applies fire damage to weapons,85
+10,Curse Resin,Applies curse damage to weapon,35
+11,Gold Resin,Applies lighting damage to weapons,40
