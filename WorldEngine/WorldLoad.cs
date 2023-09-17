@@ -81,6 +81,16 @@ namespace WorldEngine
                     Room room = new Room(id, name, description, exitNorth, exitSouth, exitEast, exitWest, exitUp, exitDown, potion, weapon, monster, treasure, item);
                     World.rooms.Add(room);
                 }
+                //adding to Dictionary
+                int nextRoomID = 101; //dw, it's needed
+                foreach (var room in World.rooms)
+                {
+                    int roomID = nextRoomID;
+
+                    World.roomDict.Add(roomID, room);
+
+                    nextRoomID++;
+                }
             }
         }
 
