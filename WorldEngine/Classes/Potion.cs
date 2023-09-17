@@ -11,26 +11,20 @@ public class Potion
 {
     private int _idNumber;
     private string _name;
-    private string action;
-    private int id;
+    private int Action;
+    
 
-    public Potion(int id, string name)
-    {
-        this.id = id;
-        Name = name;
-    }
+   
 
-    public Potion(int idNumber, string name, string action)
+    public Potion(int idNumber, string name, int action)
     {
         IdNumber = idNumber;
 
         Name = name;
 
-       
-        
-        
-    }
+        Action = action;
 
+    }
     public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }
     public string Name { get { return _name; } set { _name = value; } }
     
