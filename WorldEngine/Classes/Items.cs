@@ -11,7 +11,7 @@ namespace WorldEngine
         private int _idNumber;
         private string _name;
         private string _description;
-        private string _item;
+        
         public Items(int idNumber, string name, string description)
         {
             IdNumber = idNumber;

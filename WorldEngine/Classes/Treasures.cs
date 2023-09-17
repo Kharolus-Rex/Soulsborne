@@ -13,13 +13,13 @@ public class Treasures
     private string _name;
     private int _value;
 
-    public Treasures(int idNumber, string name, string value)
+    public Treasures(int idNumber, string name, int value)
     {
         IdNumber = idNumber;
 
         Name = name;
 
-        Value = Value;
+        Value = value;
 
     }
 
