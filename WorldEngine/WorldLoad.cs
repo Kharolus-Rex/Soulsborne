@@ -118,5 +118,20 @@ namespace WorldEngine
             }
         }
 
+        public static void LoadItems()
+        {
+            //TODO - fill out LoadItems for Items class.
+        }
+
+        public static void LoadTreasures()
+        {
+            //TODO - fill out LoadTreasures for Treasures class.
+        }
+
+        public static void LoadPotions()
+        {
+            //TODO - fill out LoadPotions for Potions class.
+        }
+
     }
 }

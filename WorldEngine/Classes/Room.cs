@@ -20,10 +20,10 @@ namespace WorldEngine
         private List<Potion> _potions;
         private List<Weapon> _weapons;
         private List<Monster> _monsters;
-        private List<Treasure> _treasures;
-        private List<Item> _items;
+        private List<Treasures> _treasures;
+        private List<Items> _items;
 
-        public Room(int idNumber, string name, string description, int exitNorth, int exitSouth, int exitEast, int exitWest, int exitUp, int exitDown, List<Potion> potions, List<Weapon> weapons, List<Monster> monsters, List<Treasure> treasures, List<Item> items)
+        public Room(int idNumber, string name, string description, int exitNorth, int exitSouth, int exitEast, int exitWest, int exitUp, int exitDown, List<Potion> potions, List<Weapon> weapons, List<Monster> monsters, List<Treasures> treasures, List<Items> items)
         {
             IdNumber = idNumber;
             Name = name;

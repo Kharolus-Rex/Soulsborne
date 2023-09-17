@@ -10,6 +10,11 @@ namespace WorldEngine
     {
         //also for common messages the system may give the player
 
+        public static void GameStart()
+        {
+            //TODO - initial game intro loop.
+        }
+
         public static void GameplayLoop()
         {
             //TODO - code simple loop. will do after classes and CSV files are uploaded and updated.
