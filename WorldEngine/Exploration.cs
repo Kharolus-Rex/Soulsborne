@@ -163,6 +163,7 @@ namespace WorldEngine
                     Console.WriteLine($" -  {treasure.Name}");
                 }
             }
+            return;
         }
     }
 }
