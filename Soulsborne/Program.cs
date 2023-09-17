@@ -12,18 +12,18 @@ namespace Soulsborne
         static void Main(string[] args)
         {
             //Load statements for lists
-            //WorldLoad.LoadWeapons();
-            //WorldLoad.LoadMonsters();
-            //WorldLoad.LoadRooms();
-            //WorldLoad.LoadPlayer();
-            //WorldLoad.LoadItems();
-            //WorldLoad.LoadPotions();
-            //WorldLoad.LoadTreasures();
+            WorldLoad.LoadWeapons();
+            WorldLoad.LoadMonsters();
+            WorldLoad.LoadRooms();
+            WorldLoad.LoadPlayer();
+            WorldLoad.LoadItems();
+            WorldLoad.LoadPotions();
+            WorldLoad.LoadTreasures();
             ActiveGameplay.GameStart();
 
             //Gameplay loop to go below
-            //ActiveGameplay.GameplayLoop();
-            //ActiveGameplay.ExitState();
+            ActiveGameplay.GameplayLoop();
+            ActiveGameplay.ExitState();
         }
     }
 }
