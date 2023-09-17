@@ -19,9 +19,9 @@ namespace WorldEngine
         {
             Room room = World.rooms[World.players[0].PlayerLocation];
             string action;
-            action = Console.ReadLine().ToLower();
             do
             {
+                action = Console.ReadLine().ToLower();
                 room = World.rooms[World.players[0].PlayerLocation];
                 switch (action)
                 {
