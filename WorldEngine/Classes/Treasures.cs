@@ -18,11 +18,14 @@ public class Treasures
 
         Name = name;
 
+        Value = Value;
 
     }
 
     public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }
     public string Name { get { return _name; } set { _name = value; } }
+
+    private int Value { get { return _value; } set { _value = value; } }
 
    }
     
