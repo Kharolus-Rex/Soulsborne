@@ -12,6 +12,8 @@ public class Treasures
     private int _idNumber;
     private string _name;
     private int _value;
+    private string value;
+
     public Treasures(int idNumber, string name)
     {
         IdNumber = idNumber;
@@ -20,6 +22,11 @@ public class Treasures
 
         Value = Value;
 
+    }
+
+    public Treasures(int idNumber, string name, string value) : this(idNumber, name)
+    {
+        this.value = value;
     }
 
     public int IdNumber { get { return _idNumber; } set { _idNumber = value; } }

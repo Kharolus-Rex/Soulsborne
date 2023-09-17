@@ -12,6 +12,14 @@ public class Potion
     private int _idNumber;
     private string _name;
     private string action;
+    private int id;
+
+    public Potion(int id, string name)
+    {
+        this.id = id;
+        Name = name;
+    }
+
     public Potion(int idNumber, string name, string action)
     {
         IdNumber = idNumber;
