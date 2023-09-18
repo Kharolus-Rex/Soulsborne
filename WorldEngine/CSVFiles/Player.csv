@@ -1,2 +1,2 @@
 ﻿ID,name,race,location,HP,AC,weaponID,items,potions,treasures
-01,Runner,humanoid,01,200,15,02,,,
+01,Runner,humanoid,1,200,15,02,,,

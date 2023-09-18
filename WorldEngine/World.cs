@@ -29,7 +29,7 @@ namespace WorldEngine
 
         public static Room FindRoomByID(int roomId)
         {
-            foreach (Room room in rooms)
+            foreach (Room room in World.rooms)
             {
                 if (room.IdNumber == roomId)
                 {
