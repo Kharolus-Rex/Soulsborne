@@ -11,16 +11,36 @@ namespace WorldEngine
     {
         //also for common messages the system may give the player
 
+        public static string GetUserInput()
+        {
+            string input;
+            input = Console.ReadLine();
+            return input;
+        }
+        public static void CommandCase() 
+        {
+            string input = GetUserInput();
+            string[] commands = input.Split(null);
+            string action = commands[0].ToLower();
+            string noun;
+            if (commands.Length != 1)
+            {
+                noun = commands[1];
+            }
+            else
+            {
+                noun = "";
+            }
+            GameplayLoop(action, noun);
+        }
         public static void GameStart()
         {
             Console.WriteLine("Welcome to Soulsborne");
         }
 
-        public static void GameplayLoop()
+        public static void GameplayLoop(string action, string noun)
         {
             Room room = World.FindRoomByID(World.players[0].PlayerLocation);
-            string action;
-            action = Console.ReadLine().ToLower();
             do
             {
                 room = World.FindRoomByID(World.players[0].PlayerLocation);
@@ -45,7 +65,14 @@ namespace WorldEngine
                         break;
                     //TODO Add a inventory command also need to update playercsv to have an inventory
                     case "look":
-                        Exploration.LookAround();
+                        if (noun != "")
+                        {
+                            Exploration.LookAround(noun);
+                        }
+                        else
+                        {
+                            Exploration.LookAround();
+                        }                     
                         break;
                     default:
                         Console.WriteLine("Your body and mind are not sync. You cannot do that action");
@@ -54,7 +81,7 @@ namespace WorldEngine
 
                 NormalState(World.players[0]);
 
-                action = Console.ReadLine().ToLower();
+                CommandCase();
 
             } while (action != "exit");
         }

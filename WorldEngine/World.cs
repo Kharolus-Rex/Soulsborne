@@ -14,13 +14,13 @@ namespace WorldEngine
 
     public static class World
     {
-        public static List<Room> rooms = new List<Room>();
-        public static List<Weapon> weapons = new List<Weapon>();
-        public static List<Monster> monsters = new List<Monster>();
-        public static List<Player> players = new List<Player>();
-        public static List<Potion> potion = new List<Potion>();
-        public static List<Treasures> treasures = new List<Treasures>();
-        public static List<Items> items = new List<Items>();
+        public static readonly List<Room> rooms = new List<Room>();
+        public static readonly List<Weapon> weapons = new List<Weapon>();
+        public static readonly List<Monster> monsters = new List<Monster>();
+        public static readonly List<Player> players = new List<Player>();
+        public static readonly List<Potion> potion = new List<Potion>();
+        public static readonly List<Treasures> treasures = new List<Treasures>();
+        public static readonly List<Items> items = new List<Items>();
 
         public static Dictionary<int, Room> roomDict = new Dictionary<int, Room>();
         public static Dictionary<int, Items> itemDict = new Dictionary<int, Items>();
@@ -38,5 +38,36 @@ namespace WorldEngine
             }
             return null;
         }
+
+        #region Items
+        public static Items ItemByID(int id)
+        {
+            return items.SingleOrDefault(x => x.IdNumber == id);
+        }
+        public static Items ItemByName(string name)
+        {
+            return items.SingleOrDefault(x => x.Name == name);
+        }
+        #endregion
+        #region Monster
+        public static Monster MonsterByID(int id)
+        {
+            return monsters.SingleOrDefault(x => x.IdNumber == id);
+        }
+        public static Monster MonsterByName(string name)
+        {
+            return monsters.SingleOrDefault(x => x.Name == name);
+        }
+        #endregion
+        #region Weapon
+        public static Weapon WeaponByID(int id)
+        {
+            return weapons.SingleOrDefault(x => x.IdNumber == id);
+        }
+        public static Weapon WeaponByName(string name)
+        {
+            return weapons.SingleOrDefault(x => x.Name == name);
+        }
+        #endregion
     }
 }

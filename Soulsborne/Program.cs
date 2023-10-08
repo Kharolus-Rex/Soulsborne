@@ -34,7 +34,7 @@ namespace Soulsborne
             //Gameplay loop to go below
             ActiveGameplay.GameStart();
             ActiveGameplay.NormalState(World.players[0]);
-            ActiveGameplay.GameplayLoop();
+            ActiveGameplay.CommandCase();
             ActiveGameplay.ExitState();
 
         }

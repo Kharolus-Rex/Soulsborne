@@ -123,48 +123,95 @@ namespace WorldEngine
             }
             return;
         }
-
         public static void LookAround()
+        {
+            Room room = World.FindRoomByID(World.players[0].PlayerLocation);
+            Console.WriteLine("You are at " + room.Name);
+        }
+        public static void LookAround(string noun)
         {
             Room room = World.FindRoomByID(World.players[0].PlayerLocation);
             //display mods, items, etc.
             Console.WriteLine();
-            if (room.Monsters != null && room.Monsters.Count > 0)
+            Monster monsterToLook = World.MonsterByName(noun);
+            Weapon weaponToLook = World.WeaponByName(noun);
+            Items itemToLook = World.ItemByName(noun);
+            if (monsterToLook != null)
             {
-                Console.WriteLine("Monsters present:");
                 foreach (Monster monster in room.Monsters)
                 {
-                    Console.WriteLine($" - {monster.Name}");
+                    if (monster.Name == monsterToLook.Name)
+                    {
+                        Console.WriteLine($"Name - {monsterToLook.Name}");
+                        Console.WriteLine($"AC - { monsterToLook.AC}");
+                        Console.WriteLine($"HP - { monsterToLook.HP}");
+                    }
                 }
             }
-
-            if (room.Items != null && room.Items.Count > 0)
+            else if(weaponToLook != null)
             {
-                Console.WriteLine("Items:");
-                foreach (Items item in room.Items)
-                {
-                    Console.WriteLine($" - {item.Name}");
-                }
-            }
-
-            if (room.Weapons != null && room.Weapons.Count > 0)
-            {
-                Console.WriteLine("Weapons:");
                 foreach (Weapon weapon in room.Weapons)
                 {
-                    Console.Write($" - {weapon.Name}");
+                    if (weapon.Name == weaponToLook.Name)
+                    {
+                        Console.WriteLine($"Weapon Name - {weaponToLook.Name}");
+                        //Console.WriteLine($"Description - {weaponToLook.Description}");  //TODO - Add a description to Weapons
+                        Console.WriteLine($"Damage - {weaponToLook.Damage}");
+                        Console.WriteLine($"Damage Type - {weaponToLook.DamageType}");
+                        Console.WriteLine($"Price - {weaponToLook.Price}");
+                    }
                 }
             }
-
-            if (room.Treasures != null && room.Treasures.Count > 0)
+            else if (itemToLook != null)
             {
-                Console.WriteLine("Treasures:");
-                foreach (Treasures treasure in room.Treasures)
+                foreach (Items item in room.Items)
                 {
-                    Console.WriteLine($" -  {treasure.Name}");
+                    if(item.Name == itemToLook.Name)
+                    {
+                        Console.WriteLine($"Item Name - {itemToLook.Name} ");
+                        Console.WriteLine($"Description - {itemToLook.Description} ");
+                        //Console.WriteLine($"Item Price - {itemToLook.Price} "); //TODO - Add a Price to Items
+                    }
                 }
             }
-            return;
+                #region Old Code
+                //if (room.Monsters != null && room.Monsters.Count > 0)
+                //{
+                //    Console.WriteLine("Monsters present:");
+                //    foreach (Monster monster in room.Monsters)
+                //    {
+                //        Console.WriteLine($" - {monster.Name}");
+                //    }
+                //}
+
+                //if (room.Items != null && room.Items.Count > 0)
+                //{
+                //    Console.WriteLine("Items:");
+                //    foreach (Items item in room.Items)
+                //    {
+                //        Console.WriteLine($" - {item.Name}");
+                //    }
+                //}
+
+                //if (room.Weapons != null && room.Weapons.Count > 0)
+                //{
+                //    Console.WriteLine("Weapons:");
+                //    foreach (Weapon weapon in room.Weapons)
+                //    {
+                //        Console.Write($" - {weapon.Name}");
+                //    }
+                //}
+
+                //if (room.Treasures != null && room.Treasures.Count > 0)
+                //{
+                //    Console.WriteLine("Treasures:");
+                //    foreach (Treasures treasure in room.Treasures)
+                //    {
+                //        Console.WriteLine($" -  {treasure.Name}");
+                //    }
+                //}
+                #endregion
+                return;
         }
     }
 }
