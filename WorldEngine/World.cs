@@ -52,7 +52,7 @@ namespace WorldEngine
         #region Monster
         public static Monster MonsterByID(int id)
         {
-            return monsters.SingleOrDefault(x => x.IdNumber == id);
+            return monsters.SingleOrDefault(x => x.ID == id);
         }
         public static Monster MonsterByName(string name)
         {

@@ -108,7 +108,7 @@ namespace WorldEngine
             Room room = World.FindRoomByID(World.players[0].PlayerLocation);
             Console.WriteLine($"You are currently in {room.Name}");
             Console.WriteLine($"{room.Description}");
-            Console.WriteLine($"Current HP: {player.PlayerHP}");
+            Console.WriteLine($"Current HP: {player.HP}");
             Console.WriteLine("Please enter a command: ");
         }
 

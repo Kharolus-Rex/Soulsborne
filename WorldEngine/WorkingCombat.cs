@@ -24,7 +24,7 @@ namespace WorldEngine
                 {
                     playerDamage = CalculateDamage(player.Weapons[0]);
                     monster.HP -= playerDamage;
-                    Console.WriteLine($"{player.PlayerName} dealt {playerDamage} {player.Weapons[0].DamageType} damage to {monster.Name}.");
+                    Console.WriteLine($"{player.Name} dealt {playerDamage} {player.Weapons[0].DamageType} damage to {monster.Name}.");
                     if (monster.HP <= 0)
                     {
                         Console.WriteLine($"{monster.Name} is slain.");
@@ -35,27 +35,27 @@ namespace WorldEngine
                 //if no hit
                 else
                 {
-                    Console.WriteLine($"{player.PlayerName} failed to hit {monster.Name}!");
+                    Console.WriteLine($"{player.Name} failed to hit {monster.Name}!");
                 }
 
                 //monster turn
                 int monsterDamage;
                 //roll to hit
                 diceRoll = random.Next(1, 21);
-                if (diceRoll >= player.PlayerAC)
+                if (diceRoll >= player.AC)
                 {
                     monsterDamage = CalculateDamage(monster.MonsterWeapon);
-                    player.PlayerHP -= monsterDamage;
-                    Console.WriteLine($"{monster.Name} deals {monsterDamage} {monster.MonsterWeapon.DamageType} damage to {player.PlayerName}.");
-                    if (player.PlayerHP <= 0)
+                    player.HP -= monsterDamage;
+                    Console.WriteLine($"{monster.Name} deals {monsterDamage} {monster.MonsterWeapon.DamageType} damage to {player.Name}.");
+                    if (player.HP <= 0)
                     {
-                        Console.WriteLine($"{player.PlayerName} is slain.");
+                        Console.WriteLine($"{player.Name} is slain.");
                         ActiveGameplay.GameOver();
                     }
                 }
                 else
                 {
-                    Console.WriteLine($"{monster.Name} failed to hit {player.PlayerName}!");
+                    Console.WriteLine($"{monster.Name} failed to hit {player.Name}!");
                 }
             }
         }
