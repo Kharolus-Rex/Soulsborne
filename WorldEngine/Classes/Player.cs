@@ -6,39 +6,28 @@ using System.Threading.Tasks;
 
 namespace WorldEngine
 {
-    public class Player
+    public class Player : LivingCreature
     {
-        private int _playerID;
-        private string _playerName;
-        private string _playerRace;
         private int _location;
-        private int _playerHP;
-        private int _playerAC;
         private List<Weapon> _weapons;
         private List<Items> _items;
         private List<Potion> _potion;
         private List<Treasures> _treasures;
 
-        public Player(int playerID, string playerName, string playerRace, int location, int playerHP, int playerAC, List<Weapon> weapons, List<Items> items, List<Potion> potion, List<Treasures> treasures)
+        public Player(int Id, string name, string race, int location, int Hp, int Ac, List<Weapon> weapons, List<Items> items, List<Potion> potion, List<Treasures> treasures) : base(Hp, Ac, Id, race, name)
         {
-            PlayerID = playerID;
-            PlayerName = playerName;
-            PlayerRace = playerRace;
+            ID = Id;
+            Name = name;
+            Race = race;
             PlayerLocation = location;
-            PlayerHP = playerHP;
-            PlayerAC = playerAC;
+            HP = Hp;
+            AC = Ac;
             Weapons = weapons;
             Item = items;
             Potions = potion;
             Treasure = treasures;
         }
-        public int PlayerID { get { return _playerID; } set { _playerID = value; } }
-        public string PlayerName { get { return _playerName; } set { _playerName = value; } }
-        public string PlayerRace { get { return _playerRace; } set { _playerRace = value; } }
         public int PlayerLocation { get { return _location; } set { _location = value; } }
-        public int PlayerHP { get { return _playerHP; } set { _playerHP = value; } }
-        public int PlayerAC { get { return _playerAC; } set { _playerAC = value; } }
-
         public List<Weapon> Weapons { get { return _weapons; } set { _weapons = value; } }
         public List<Items> Item { get { return _items; } set { _items = value; } }
         public List<Potion> Potions { get { return _potion; } set { _potion = value; } }
