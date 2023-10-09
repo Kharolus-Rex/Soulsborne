@@ -11,19 +11,39 @@ namespace WorldEngine
     {
         //also for common messages the system may give the player
 
+        public static string GetUserInput()
+        {
+            string input;
+            input = Console.ReadLine();
+            return input;
+        }
+        public static void CommandCase() 
+        {
+            string input = GetUserInput();
+            string[] commands = input.Split(null);
+            string action = commands[0].ToLower();
+            string noun;
+            if (commands.Length != 1)
+            {
+                noun = commands[1];
+            }
+            else
+            {
+                noun = "";
+            }
+            GameplayLoop(action, noun);
+        }
         public static void GameStart()
         {
             Console.WriteLine("Welcome to Soulsborne");
         }
 
-        public static void GameplayLoop()
+        public static void GameplayLoop(string action, string noun)
         {
-            Room room = World.rooms[World.players[0].PlayerLocation];
-            string action;
-            action = Console.ReadLine().ToLower();
+            Room room = World.FindRoomByID(World.players[0].PlayerLocation);
             do
             {
-                room = World.rooms[World.players[0].PlayerLocation];
+                room = World.FindRoomByID(World.players[0].PlayerLocation);
                 switch (action)
                 {
                     case "north":
@@ -45,7 +65,14 @@ namespace WorldEngine
                         break;
                     //TODO Add a inventory command also need to update playercsv to have an inventory
                     case "look":
-                        Exploration.LookAround();
+                        if (noun != "")
+                        {
+                            Exploration.LookAround(noun);
+                        }
+                        else
+                        {
+                            Exploration.LookAround();
+                        }                     
                         break;
                     default:
                         Console.WriteLine("Your body and mind are not sync. You cannot do that action");
@@ -54,7 +81,7 @@ namespace WorldEngine
 
                 NormalState(World.players[0]);
 
-                action = Console.ReadLine().ToLower();
+                CommandCase();
 
             } while (action != "exit");
         }
@@ -78,7 +105,7 @@ namespace WorldEngine
         public static void NormalState(Player player)
         {
             //TODO - initial statement between loops, such as inital information whent the player arrives in a room
-            Room room = World.rooms[player.PlayerLocation];
+            Room room = World.FindRoomByID(World.players[0].PlayerLocation);
             Console.WriteLine($"You are currently in {room.Name}");
             Console.WriteLine($"{room.Description}");
             Console.WriteLine($"Current HP: {player.PlayerHP}");
