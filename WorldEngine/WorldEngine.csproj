@@ -72,6 +72,7 @@
     <None Include="CSVFiles\rooms.csv" />
     <None Include="CSVFiles\Treasures.csv" />
     <None Include="CSVFiles\weapons.csv" />
+    <None Include="Database\classesDB.db" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
