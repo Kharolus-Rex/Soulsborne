@@ -135,7 +135,7 @@ namespace WorldEngine
             {
                 //var output = cnn.Query<Items>("select * from Items", new DynamicParameters());
                 connection.Open();
-                SQLiteCommand cmd = new SQLiteCommand("select * from Items",connection);
+                SQLiteCommand cmd = new SQLiteCommand("select * from items", connection);
                 SQLiteDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
