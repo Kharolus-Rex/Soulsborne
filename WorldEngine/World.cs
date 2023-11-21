@@ -24,13 +24,13 @@ namespace WorldEngine
         //List<Treasures> treasures = WorldLoadDatabase.LoadTreasures();
         //List<Items> items = WorldLoadDatabase.LoadItems();
         //}
-        public static readonly List<Room> rooms = WorldLoadDatabase.LoadRooms();
-        public static readonly List<Weapon> weapons = WorldLoadDatabase.LoadWeapons();
-        public static readonly List<Monster> monsters = WorldLoadDatabase.LoadMonsters();
-        public static readonly List<Player> players = WorldLoadDatabase.LoadPlayers();
-        public static readonly List<Potion> potion = WorldLoadDatabase.LoadPotions();
-        public static readonly List<Treasures> treasures = WorldLoadDatabase.LoadTreasures();
-        public static readonly List<Items> items = WorldLoadDatabase.LoadItems();
+        public static readonly List<Room> rooms = new List<Room>();
+        public static readonly List<Weapon> weapons = new List<Weapon>();
+        public static readonly List<Monster> monsters = new List<Monster>();
+        public static readonly List<Player> players = new List<Player>();
+        public static readonly List<Potion> potion = new List<Potion>();
+        public static readonly List<Treasures> treasures = new List<Treasures>();
+        public static readonly List<Items> items = new List<Items>();
 
         
 
