@@ -26,7 +26,7 @@ namespace WorldEngine
         //}
         public static readonly List<Room> rooms = new List<Room>();
         public static readonly List<Weapon> weapons = new List<Weapon>();
-        public static readonly List<Monster> monsters = new List<Monster>();
+        public static List<Monster> monsters = new List<Monster>();
         public static readonly List<Player> players = new List<Player>();
         public static readonly List<Potion> potion = new List<Potion>();
         public static readonly List<Treasures> treasures = new List<Treasures>();

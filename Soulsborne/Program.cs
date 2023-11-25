@@ -29,11 +29,12 @@ namespace Soulsborne
             //WorldLoad.LoadMonsters();
             //WorldLoad.LoadRooms();
             //WorldLoad.LoadPlayer();
+            World.monsters = WorldLoadDatabase.LoadMonsters();
             WorldLoadDatabase.LoadItems();
             WorldLoadDatabase.LoadPotions();
             WorldLoadDatabase.LoadTreasures();
             WorldLoadDatabase.LoadWeapons();
-            WorldLoadDatabase.LoadMonsters();
+            
             WorldLoadDatabase.LoadRooms();
             WorldLoadDatabase.LoadPlayers();
             

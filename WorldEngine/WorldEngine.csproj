@@ -82,7 +82,6 @@
     <None Include="CSVFiles\rooms.csv" />
     <None Include="CSVFiles\Treasures.csv" />
     <None Include="CSVFiles\weapons.csv" />
-    <None Include="Database\classesDB.db" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

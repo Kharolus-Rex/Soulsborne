@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
 using Dapper;
+using System.ComponentModel.Design;
 
 namespace WorldEngine
 {
@@ -34,30 +35,31 @@ namespace WorldEngine
                 }
             }
         }
-        public static void LoadMonsters()
+        public static List<Monster> LoadMonsters()
         {
-            string dbfile = "URI=file:classesDB.db";
-            using (SQLiteConnection connection = new SQLiteConnection(dbfile))
+            //string dbfile = "URI=file:classesDB.db";
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                //var output = cnn.Query<Weapon>("select * from Monsters", new DynamicParameters());
-                connection.Open();
-                SQLiteCommand cmd = new SQLiteCommand("select * from Monsters", connection);
-                SQLiteDataReader dataReader = cmd.ExecuteReader();
-                while (dataReader.Read())
-                {
-                    int ID = dataReader.GetInt32(0);
-                    string name = dataReader.GetString(1);
-                    string description = dataReader.GetString(2);
-                    string race = dataReader.GetString(3);
-                    int hp = dataReader.GetInt32(4);
-                    int ac = dataReader.GetInt32(5);
-                    int weaponID = dataReader.GetInt32(6);
+                var output = cnn.Query<Monster>("select * from Monsters", new DynamicParameters());
+                //cnn.Open();
+                //SQLiteCommand cmd = new SQLiteCommand("select * from Monsters", cnn);
+                //SQLiteDataReader dataReader = cmd.ExecuteReader();
+                //while (output.Read())
+                //{
+                //    int ID = dataReader.GetInt32(0);
+                //    string name = dataReader.GetString(1);
+                //    string description = dataReader.GetString(2);
+                //    string race = dataReader.GetString(3);
+                //    int hp = dataReader.GetInt32(4);
+                //    int ac = dataReader.GetInt32(5);
+                //    int weaponID = dataReader.GetInt32(6);
 
-                    Weapon weapon = World.weapons.FirstOrDefault(w => w.IdNumber == weaponID);
+                //    Weapon weapon = World.weapons.FirstOrDefault(w => w.IdNumber == weaponID);
 
-                    Monster monster = new Monster(ID, name, description, race, hp, ac, weapon);
-                    World.monsters.Add(monster);
-                }
+                //    Monster monster = new Monster(ID, name, description, race, hp, ac, weapon);
+                //    World.monsters.Add(monster);
+                //}
+                return output.ToList();
             }
         }
         public static void LoadRooms()
@@ -135,7 +137,7 @@ namespace WorldEngine
             {
                 //var output = cnn.Query<Items>("select * from Items", new DynamicParameters());
                 connection.Open();
-                SQLiteCommand cmd = new SQLiteCommand("select * from items", connection);
+                SQLiteCommand cmd = new SQLiteCommand("select * from Items", connection);
                 SQLiteDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
