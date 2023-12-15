@@ -10,8 +10,11 @@ namespace WorldEngine
     {
         private static Random random = new Random();
         //for use in combat and damage calculations
-        public static void CombatLoop(Player player, Monster monster)
+        public static void CombatLoop()
         {
+            Player player = World.players[0]; // Always references current player data.
+            Monster monster = World.rooms[World.players[0].PlayerLocation].Monsters[0]; // Always references current monster data.
+
             while (true)
             {
                 //general dice variable. used for both player and monster.

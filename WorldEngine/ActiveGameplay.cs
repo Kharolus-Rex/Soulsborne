@@ -61,7 +61,7 @@ namespace WorldEngine
                         Exploration.Movement(action, room);
                         break;
                     case "attack":
-                        WorkingCombat.CombatLoop(World.players[0], room.Monsters[0]);
+                        WorkingCombat.CombatLoop();
                         break;
                     //TODO Add a inventory command also need to update playercsv to have an inventory
                     case "look":
